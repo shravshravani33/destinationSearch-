@@ -6,6 +6,7 @@ class DestinationSearch extends Component {
   state = {searchInput: ''}
 
   onChangeSearchInput = event => {
+    console.log(event.target.value)
     this.setState({searchInput: event.target.value})
   }
 
@@ -25,6 +26,7 @@ class DestinationSearch extends Component {
               type="search"
               className="search-bar"
               placeholder="Search"
+              value={searchInput}
               onChange={this.onChangeSearchInput}
             />
             <img
